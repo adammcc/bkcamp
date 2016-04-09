@@ -1,8 +1,10 @@
 var BkShowSlidShow = React.createClass({
   getInitialState: function () {
     return {
-      activePic: this.props.pics[0],
-      recommendations: this.recommendations()
+      activePic: info[this.props.params.name].pics[0],
+      recommendations: this.recommendations(),
+      recipe: info[this.props.params.name].recipe,
+      instructions: info[this.props.params.name].instructions
     };
   },
   componentDidMount: function() {
@@ -10,8 +12,10 @@ var BkShowSlidShow = React.createClass({
   },
   componentWillReceiveProps: function(props) {
     this.setState({
-      activePic: props.pics[0],
-      recommendations: this.recommendations()
+      activePic: info[props.params.name].pics[0],
+      recommendations: this.recommendations(),
+      recipe: info[props.params.name].recipe,
+      instructions: info[props.params.name].instructions
     }, this.reset);
   },
   reset: function () {
@@ -36,17 +40,17 @@ var BkShowSlidShow = React.createClass({
     }, this.textToHtml);
   },
   nextPic: function () {
-    var currentPicIndex = this.props.pics.indexOf(this.state.activePic);
-    var nextPicIndex = currentPicIndex == this.props.pics.length - 1 ? 0 : currentPicIndex + 1;
+    var currentPicIndex = info[this.props.params.name].pics.indexOf(this.state.activePic);
+    var nextPicIndex = currentPicIndex == info[this.props.params.name].pics.length - 1 ? 0 : currentPicIndex + 1;
     this.setState({
-      activePic: this.props.pics[nextPicIndex]
+      activePic: info[this.props.params.name].pics[nextPicIndex]
     });
   },
   prevPic: function () {
-    var currentPicIndex =  this.props.pics.indexOf(this.state.activePic);
-    var prevPicIndex = currentPicIndex == 0 ? this.props.pics.length - 1 : currentPicIndex - 1;
+    var currentPicIndex =  info[this.props.params.name].pics.indexOf(this.state.activePic);
+    var prevPicIndex = currentPicIndex == 0 ? info[this.props.params.name].pics.length - 1 : currentPicIndex - 1;
     this.setState({
-      activePic: this.props.pics[prevPicIndex]
+      activePic: info[this.props.params.name].pics[prevPicIndex]
     });
   },
   recommendations: function () {
@@ -64,17 +68,16 @@ var BkShowSlidShow = React.createClass({
   render: function () {
     var setActivePic = this.setActivePic
     var activePic = this.state.activePic
-    var recipe = info[this.props.articleName]['recipe']
-    var instructions = info[this.props.articleName]['instructions']
-
+    var recipe = this.state.recipe
+    var instructions = this.state.instructions
     return (
       <div>
-        <BkMainHeader path="#articles" />
-        <div className="bk-show__title">[ { this.props.title } ]</div>
+        <BkMainHeader path="#articles/everything" />
+        <div className="bk-show__title">[ { info[this.props.params.name].title } ]</div>
 
         <div className="col-sm-8">
           <div className="bk-show__main-image">
-            <SlideShowNav prevPic={this.prevPic} nextPic={this.nextPic} picCount={ info[this.props.articleName]['pics'].length } />
+            <SlideShowNav prevPic={this.prevPic} nextPic={this.nextPic} picCount={ info[this.props.params.name].pics.length } />
             <img src={ this.state.activePic } alt="bug" width="100%" height="90%"/>
           </div>
           <div className="bk-show__recipe--container">
@@ -84,7 +87,7 @@ var BkShowSlidShow = React.createClass({
                   <dl className="bk-show__recipe js-show__recipe">
 
                       { recipe.map(function (line) {
-                        return ({ line });
+                        return (<p key={ line }>{line}</p>);
                       })}
 
                   </dl>
@@ -105,7 +108,7 @@ var BkShowSlidShow = React.createClass({
 
 
         <div className="col-sm-3">
-          <div className="bk-show__image-blurb js-show__image-blurb">{ info[this.props.articleName]['blurb'] }</div>
+          <div className="bk-show__image-blurb js-show__image-blurb">{ info[this.props.params.name]['blurb'] }</div>
         </div>
 
         <div className="col-sm-12">

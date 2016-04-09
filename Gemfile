@@ -11,7 +11,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'react-rails', '~> 1.6.0'
+gem 'react-rails', '~> 1.4.0'
+gem 'react-router-rails', '~> 0.13.3.1'
 
 group :development, :test do
   gem 'byebug'

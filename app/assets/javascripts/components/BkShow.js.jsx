@@ -1,7 +1,7 @@
 var BkShow = React.createClass({
   getInitialState: function () {
     return {
-      activePic: this.props.pics[0],
+      activePic: info[this.props.params.name].pics[0],
       recommendations: this.recommendations()
     };
   },
@@ -10,7 +10,7 @@ var BkShow = React.createClass({
   },
   componentWillReceiveProps: function(props) {
     this.setState({
-      activePic: props.pics[0],
+      activePic: info[props.params.name].pics[0],
       recommendations: this.recommendations()
     }, this.reset);
   },
@@ -29,17 +29,17 @@ var BkShow = React.createClass({
     }, this.textToHtml);
   },
   nextPic: function () {
-    var currentPicIndex = this.props.pics.indexOf(this.state.activePic);
-    var nextPicIndex = currentPicIndex == this.props.pics.length - 1 ? 0 : currentPicIndex + 1;
+    var currentPicIndex = info[this.props.params.name].pics.indexOf(this.state.activePic);
+    var nextPicIndex = currentPicIndex == info[this.props.params.name].pics.length - 1 ? 0 : currentPicIndex + 1;
     this.setState({
-      activePic: this.props.pics[nextPicIndex]
+      activePic: info[this.props.params.name].pics[nextPicIndex]
     });
   },
   prevPic: function () {
-    var currentPicIndex =  this.props.pics.indexOf(this.state.activePic);
-    var prevPicIndex = currentPicIndex == 0 ? this.props.pics.length - 1 : currentPicIndex - 1;
+    var currentPicIndex =  info[this.props.params.name].pics.indexOf(this.state.activePic);
+    var prevPicIndex = currentPicIndex == 0 ? info[this.props.params.name].pics.length - 1 : currentPicIndex - 1;
     this.setState({
-      activePic: this.props.pics[prevPicIndex]
+      activePic: info[this.props.params.name].pics[prevPicIndex]
     });
   },
   recommendations: function () {
@@ -48,7 +48,7 @@ var BkShow = React.createClass({
 
     while (titles.length < 3 ) {
       title = articleTitles[Math.floor(Math.random()*(articleTitles.length - 1))];
-      if ( titles.indexOf(title) == -1 && this.props.articleName != title) {
+      if ( titles.indexOf(title) == -1 && info[this.props.params.name].pics.articleName != title) {
         titles.push(title);
       };
     }
@@ -60,8 +60,8 @@ var BkShow = React.createClass({
     var activePic = this.state.activePic
     return (
       <div>
-        <BkMainHeader path="#articles" />
-        <div className="bk-show__title">[ { this.props.title } ]</div>
+        <BkMainHeader path="#articles/everything" />
+        <div className="bk-show__title">[ { info[this.props.params.name].title } ]</div>
 
         <div className="bk-show__main-image col-sm-8">
           <GalleryNav prevPic={this.prevPic} nextPic={this.nextPic} />
@@ -69,7 +69,7 @@ var BkShow = React.createClass({
         </div>
 
         <div className="col-sm-3">
-          <BkShowThumbs pics={this.props.pics} setActivePic={setActivePic} activePic={activePic} />
+          <BkShowThumbs pics={info[this.props.params.name].pics} setActivePic={setActivePic} activePic={activePic} />
           <div className="bk-show__image-blurb js-show__image-blurb">{ this.state.activePic[2] }</div>
         </div>
 

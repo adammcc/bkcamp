@@ -14,7 +14,7 @@ var BodyContent = React.createClass({
   },
   getArticles: function () {
     var articleTitles = Object.keys(info)
-    if ( this.props.filter == 'everything' ) {
+    if (this.props.params.filter == 'everything') {
       var featureTitle = this.getFeatureTitle()
       var index = articleTitles.indexOf(featureTitle);
 
@@ -23,7 +23,7 @@ var BodyContent = React.createClass({
       return this.split(articleTitles, 3);
     } else {
       var filteredTitles = []
-      var filter = this.props.filter
+      var filter = this.props.params.filter
       $.each( articleTitles, function( i, title ) {
         if ( info[title]['filter'] == filter ) {
           filteredTitles.push(title);
@@ -46,12 +46,13 @@ var BodyContent = React.createClass({
   render: function () {
     var titles_in_threes = this.getArticles()
     var featureTitle = this.getFeatureTitle()
-    var filter = this.props.filter
+    var filter = this.props.params.filter
+    console.log(this.props.params.filter)
     return (
       <div>
-        <BkMainHeader filter={ filter } path="#" />
+        <BkMainHeader filter={ filter } path="/" />
         {
-          this.props.filter == 'everything' ?
+          filter == 'everything' ?
             <BkFeatureArticle src={ info[featureTitle].feature_img_src } alt={ featureTitle } key={ featureTitle } title={ info[featureTitle].title } pics={ info[featureTitle].pics }  article_type={ info[featureTitle ].article_type } >
               { info[featureTitle].main_blurb }
             </BkFeatureArticle>
@@ -61,7 +62,7 @@ var BodyContent = React.createClass({
 
         { titles_in_threes.map(function (three_titles) {
           return (
-            <BkColumn threeTitles={three_titles} />
+            <BkColumn key={three_titles[0]} threeTitles={three_titles} />
           );
         })}
       </div>

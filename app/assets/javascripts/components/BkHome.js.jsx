@@ -38,10 +38,10 @@ var BkHome = React.createClass({
     return (
       <div className="bk-home-container" style={bkHomeContainerStyle}>
         <div className="bk-home__center">
-          <a href="#articles">
+          <Link to='/articles/everything'>
             <h1 className="bk-header__title -home">Brooklyn Camper</h1>
             <p className="bk-home__enter bk-home__faded">ENTER</p>
-          </a>
+          </Link>
         </div>
 
         <div className="bk-home__bottom_left bk-home__faded">
