@@ -36,7 +36,7 @@ var BodyContent = React.createClass({
     var articleTitles = Object.keys(info)
     var featureTitle = ""
     $.each( articleTitles, function( i, title ) {
-      if ( info[title]['feature_article'] == "true" ) {
+      if ( info[title]["feature_article"] ) {
         featureTitle = title;
       };
     });
@@ -47,7 +47,6 @@ var BodyContent = React.createClass({
     var titles_in_threes = this.getArticles()
     var featureTitle = this.getFeatureTitle()
     var filter = this.props.params.filter
-    console.log(this.props.params.filter)
     return (
       <div>
         <BkMainHeader filter={ filter } path="/" />

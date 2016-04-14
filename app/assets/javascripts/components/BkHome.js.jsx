@@ -3,7 +3,6 @@ var BkHome = React.createClass({
     return {
       bgItem: homeImages[0],
       bgImage: homeImages[0][0],
-      bgPosition: homeImages[0][1]
     };
   },
   nextPic: function () {
@@ -12,7 +11,6 @@ var BkHome = React.createClass({
 
     this.setState({ bgItem: homeImages[nextIndex] });
     this.setState({ bgImage: homeImages[nextIndex][0] });
-    this.setState({ bgPosition: homeImages[nextIndex][1] });
     var nextBkHomeContainerStyle = [{
       '-webkit-background-size': 'cover',
       '-moz-background-size': 'cover',
@@ -23,7 +21,7 @@ var BkHome = React.createClass({
   },
   render: function () {
     var bkHomeContainerStyle = {
-      background: 'url(' + this.state.bgImage + ') no-repeat center ' + this.state.bgPosition + ' fixed',
+      background: 'url(' + this.state.bgImage + ') no-repeat center bottom fixed',
       minHeight: '100%',
       width: '100%',
       position: 'absolute',
@@ -45,8 +43,8 @@ var BkHome = React.createClass({
         </div>
 
         <div className="bk-home__bottom_left bk-home__faded">
-          <a href={this.state.bgItem[3]}>
-            <p>{this.state.bgItem[2]}</p>
+          <a href={this.state.bgItem[2]}>
+            <p>{this.state.bgItem[1]}</p>
           </a>
         </div>
 
