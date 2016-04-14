@@ -8,7 +8,7 @@ var SlideShowNav = React.createClass({
     return (
       <div>
         <div className="bk-show__nav-item-container -home -slide-show bk-show__hide-til-hover">
-          <a className="bk-show__nav-item -home -slide-show" href="#articles">
+          <a className="bk-show__nav-item -home -slide-show" href="#articles/everything">
             <i className="fa fa-home"></i>
           </a>
         </div>

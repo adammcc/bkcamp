@@ -96,7 +96,7 @@ var BkShowSlidShow = React.createClass({
               )}
             </div>
             {(
-              instructions.length ?
+              instructions != "[]" ?
                 <div className="bk-show__instructions js-show__image-blurb col-sm-6">
                   { instructions }
                 </div>
