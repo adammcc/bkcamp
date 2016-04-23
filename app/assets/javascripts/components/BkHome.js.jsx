@@ -37,7 +37,7 @@ var BkHome = React.createClass({
       <div className="bk-home-container" style={bkHomeContainerStyle}>
         <div className="bk-home__center">
           <Link to='/articles/everything'>
-            <h1 className="bk-header__title -home">Brooklyn Camper</h1>
+            <h1 className="bk-header__title -home"><span className="-field">Field </span> <span className="-and">&</span> Fancy</h1>
             <p className="bk-home__enter bk-home__faded">ENTER</p>
           </Link>
         </div>
