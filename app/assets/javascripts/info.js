@@ -3,7 +3,7 @@ var info = {};
 
 $(document).ready(function() {
   $.ajax({
-    url: "http://localhost:3000/data",
+    url: $('#main-container').data('url'),
     async: false,
     dataType: 'json',
     success: function(data) {
