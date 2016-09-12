@@ -20,7 +20,7 @@ var BodyContent = React.createClass({
 
       if (index > -1) { articleTitles.splice(index, 1); }
 
-      return this.split(articleTitles, 3);
+      return this.split(articleTitles, 2);
     } else {
       var filteredTitles = []
       var filter = this.props.params.filter
@@ -29,7 +29,7 @@ var BodyContent = React.createClass({
           filteredTitles.push(title);
         };
       });
-      return this.split(filteredTitles, 3);
+      return this.split(filteredTitles, 2);
     };
   },
   getFeatureTitle: function () {
