@@ -158,11 +158,11 @@ span.bk-box__ellipsis {
 }
 
 .bk-feature-article {
+  display: flex;
   margin-bottom: 25px;
 }
 
 .bk-box__feature-note-container {
-  height: 452px;
   color: #55676A;
   padding-top: 5px;
   font-size: 18px;
@@ -175,7 +175,7 @@ span.bk-box__ellipsis {
   display: block;
   position: absolute;
   right: 100%;
-  top: 204px;
+  top: 46%;
   margin-top: -10px;
   width: 0;
   height: 0;
