@@ -1,0 +1,116 @@
+.bk-show__title {
+  font-size: 18px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.bk-show__main-image {
+  position: relative;
+  margin: 20px 0px;
+}
+
+.bk-show__image-blurb {
+  padding-top: 5px;
+  margin-bottom: 10px;
+}
+
+.bk-show__recipe--container {
+  color: grey;
+  display: inline-block;
+  background-color: #f7f5f0;
+}
+
+.bk-show__recipe {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.bk-show__instructions {
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+.bk-show__recipe  dd { margin-bottom: 12px; }
+.bk-show__recipe p { margin-bottom: 10px; }
+.bk-show__small-images { padding-top: 15px; margin-left: -5px; }
+
+.bk-show__small-image {
+  display: inline-block;
+  cursor: pointer;
+  padding: 7px;
+
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.bk-show__small-image.-selected {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
+.bk-show__hide-til-hover {
+  opacity: 0;
+
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.bk-show__main-image:hover .bk-show__hide-til-hover {
+  opacity: 1;
+}
+
+.bk-show__nav-item-container {
+  position: absolute;
+  background-color: rgba(0,0,0,0.4);
+  height: 40px;
+  width: 140px;
+  top: 12px;
+  right: 15px;
+}
+
+.bk-show__nav-item {
+  position: absolute;
+  top: 6px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50px;
+  border: 2px solid white;
+  i {
+    position: absolute;
+    color: white;
+    font-size: 26px;
+    text-align: center;
+  }
+  &.-home i {
+    font-size: 14px;
+    right: 6px;
+    top: 4px;
+  }
+  &.-next i {
+    right: 6px;
+    bottom: 0px;
+  }
+  &.-prev i {
+    left: 6px;
+    bottom: 0px;
+  }
+}
+
+.bk-show__nav-item.-home { right: 102px; }
+.bk-show__nav-item.-prev { right: 57px; }
+.bk-show__nav-item.-next { right: 12px; }
+
+.bk-show__nav-item-container.-home.-slide-show { right: 0; }
+
+.bk-show__nav-item-container.-home.-slide-show,
+.bk-show__nav-item-container.-next.-slide-show,
+.bk-show__nav-item-container.-prev.-slide-show { width: 53px; }
+
+.bk-show__nav-item-container.-next.-slide-show,
+.bk-show__nav-item-container.-prev.-slide-show { top: 48%; right: 0px; }
+.bk-show__nav-item-container.-prev.-slide-show { left: 0px; }
+
+.bk-show__nav-item.-home.-slide-show { right: 12px; }
+.bk-show__nav-item.-next.-slide-show { right: 12px; }
+.bk-show__nav-item.-prev.-slide-show { right: 12px; }

@@ -16,7 +16,7 @@ var BkFeatureArticle = React.createClass({
             <p className="bk-box__feature-title">{ this.props.title }</p>
             { this.props.children }
             <br/><br/>
-            <div className='bk-box__read_more'>
+            <div className='bk-feature-article__read_more'>
               <i className="fa fa-angle-double-right"></i> READ MORE
             </div>
           </div>
