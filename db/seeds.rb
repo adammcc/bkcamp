@@ -567,7 +567,7 @@ end
 
 homeImages = [
   ['assets/livingston_manor/home_image/livingston_manor__home.jpeg', 'Livingston Manor', '#article/livingston_manor'],
-  ['assets/filson/home_image/filson_1.JPG', 'Filson', '#article/filson'],
+  ['assets/filson/home_image/filson_1.JPG', 'Filson', '#slide_show/filson'],
   ['assets/spain/home_image/spain__home.jpg', 'Spain', '#article/spain'],
   ['assets/newport/home_image/newport_light_house__home.JPG', 'Newport', '#article/newport'],
   ['assets/finger_lakes/home_image/finger_lakes_upstate_bug_home.JPG', 'The Finger Lakes', '#article/finger_lakes'],
@@ -577,7 +577,7 @@ homeImages = [
   ['assets/bear_mountain/home_image/bear_mountain_lake__home.JPG', 'Bear Mountain', '#article/bear_mountain'],
   ['assets/hudson/home_image/hudson_winter_walk__home.JPG', 'Hudson Winter Walk', '#article/hudson_winter_walk'],
   ['assets/nyack/home_image/nyack_hook_mt_tree__home.JPG', 'Nyack', '#article/nyack'],
-  ['assets/storm_king/home_image/storm_king_tree__home.JPG', 'Storm King', '#article/storm_king'],
+  ['assets/storm_king/home_image/storm_king_tree__home.JPG', 'Storm King', '#slide_show/storm_king'],
   ['assets/scotland/home_image/scotch_old_man_store__home.jpg', 'Scotland', '#article/scotland'],
   ['assets/saugerties/home_image/saugerties_light_house.jpg', 'Saugerties', '#article/saugerties'],
   ['assets/mv/home_image/marthas_vineyard_creek__home.JPG', 'Marthas Vineyard', '#article/marthas_vineyard']
