@@ -71,19 +71,19 @@ var BkShowSlidShow = React.createClass({
     var recipe = this.state.recipe
     var instructions = this.state.instructions
     return (
-      <div>
+      <div className="col-sm-12">
         <BkMainHeader path="#articles/everything" />
         <div className="bk-show__title">[ { info[this.props.params.name].title } ]</div>
 
         <div className="col-sm-8">
-          <div className="bk-show__main-image">
+          <div className="bk-show__main-image -slide-show">
             <SlideShowNav prevPic={this.prevPic} nextPic={this.nextPic} picCount={ info[this.props.params.name].pics.length } />
-            <img src={ this.state.activePic } alt="bug" width="100%" height="90%"/>
+            <img src={ this.state.activePic } alt="bug" className="img-responsive" width="100%" height="90%"/>
           </div>
-          <div className="bk-show__recipe--container">
-            <div className="col-sm-6">
-              {(
-                recipe.length ?
+          {(
+            recipe.length ?
+            <div className="bk-show__recipe--container">
+              <div className="col-sm-6">
                   <dl className="bk-show__recipe js-show__recipe">
 
                       { recipe.map(function (line) {
@@ -91,25 +91,22 @@ var BkShowSlidShow = React.createClass({
                       })}
 
                   </dl>
+              </div>
+              {(
+                instructions != "[]" ?
+                  <div className="bk-show__instructions js-show__image-blurb col-sm-6">
+                    { instructions }
+                  </div>
                 :
                   false
               )}
             </div>
-            {(
-              instructions != "[]" ?
-                <div className="bk-show__instructions js-show__image-blurb col-sm-6">
-                  { instructions }
-                </div>
-              :
-                false
-            )}
-          </div>
+          :
+            false
+          )}
         </div>
 
-
-        <div className="col-sm-3">
-          <div className="bk-show__image-blurb js-show__image-blurb">{ info[this.props.params.name]['blurb'] }</div>
-        </div>
+        <div className="bk-show__image-blurb -slide-show js-show__image-blurb">{ info[this.props.params.name]['blurb'] }</div>
 
         <div className="col-sm-12">
           <div className="bk-show__title">[ More articles ]</div>
