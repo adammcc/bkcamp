@@ -1,3 +1,6 @@
+Article.delete_all
+HomeImage.delete_all
+
 info = {
   finger_lakes: {
     src: "assets/finger_lakes/finger_lakes_upstate_bug.JPG",
@@ -386,7 +389,11 @@ info = {
     filter: "getayways",
     article_type: "slide_show",
     feature_article: "false",
-    blurb: "<p>Tri-tip pig meatball, alcatra cupim picanha jowl tenderloin tail rump turkey landjaeger pork belly pastrami tenderloin tail rump turkey landjaeger. Tri-tip pig meatball, alcatra cupim  pork belly pastrami picanha jowl tenderloin tail rump turkey landjaeger pork belly pastrami.</p><br><p>Tri-tip pig meatball, alcatra cupim picanha jowl tenderloin tail rump turkey landjaeger pork belly pastrami. Tri-tip pig meatball, alcatra cupim picanha jowl tenderloin tail rump turkey landjaeger pork belly pastrami.</p><br><p>Tri-tip pig meatball, alcatra cupim picanha jowl tenderloin tail rump turkey landjaeger pork belly pastrami. Tri-tip pig meatball, alcatra cupim picanha jowl tenderloin.</p>",
+    blurb: "
+    <p>If you grew up in the New York metro area, you may remember field trips to <a href='http://stormking.org/' target='_blank'>Storm King Art Center</a>, a massive sculpture park in Orange County, about an hour north of the city. It’s an easy day trip via ZipCar, Metro North, NJ Transit or bus. It’s also a nice stop on those Sunday drives back to the city when you want to make your upstate weekend last a little longer. It pairs perfectly with a stay at the nearby historic <a href='http://stormking.org/' target='_blank'>Storm King Art Center</a>, which is how we did it during a sunny fall weekend.</p><br>
+    <p>Forget what you know about outdoor art. Visiting majestic sculptures on Storm King’s 500 acres of rolling hills, fields and woodlands is an experience like no other. Many of the large, industrial pieces feel like alien debris, or relics from a dystopian past, or simple but equally fascinating explorations of shape, physics, perception and material.</p><br>
+    <p>Storm King’s biggest draw might be the interplay of focal points and space. Each sculpture draws viewers in like a magnet, while the vast property invites them to stretch out. You’ll need at least a few hours to walk around the grounds. You won’t see everything in one visit, which is good because you’ll want to come back. Some of our favorite stops: Storm King Wall by Andy Goldsworthy; The Arch by Alexander Calder; Mirror Fence by Alyson Shotz; Suspended by Menashe Kadishman; Storm King Wavefield by Maya Lin; Sea Change by George Cutts; and Pyramidian by Mark di Suvero.</p><br>
+    ",
     recipe: [],
     instructions: [],
     pics: [
