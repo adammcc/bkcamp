@@ -575,7 +575,6 @@ homeImages = [
   ['assets/new_haven/home_image/new_haven_grass__home.JPG', 'New Haven', '#article/new_haven'],
   ['assets/hoot/home_image/hoot_home.JPG', 'Hoot', '#article/hoot'],
   ['assets/bear_mountain/home_image/bear_mountain_lake__home.JPG', 'Bear Mountain', '#article/bear_mountain'],
-  ['assets/hudson/home_image/hudson_winter_walk__home.JPG', 'Hudson Winter Walk', '#article/hudson_winter_walk'],
   ['assets/nyack/home_image/nyack_hook_mt_tree__home.JPG', 'Nyack', '#article/nyack'],
   ['assets/storm_king/home_image/storm_king_tree__home.JPG', 'Storm King', '#slide_show/storm_king'],
   ['assets/scotland/home_image/scotch_old_man_store__home.jpg', 'Scotland', '#article/scotland'],
