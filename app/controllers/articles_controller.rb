@@ -4,6 +4,7 @@ class ArticlesController < ActionController::Base
   def index
     home_images = HomeImage.all
     home_images_json = home_images.map { |hi| [hi.src, hi.title, hi.path] }
+    images = home_images.map { |hi| hi.src }
 
     articles = Article.all
     article_info_json = {}
@@ -23,8 +24,25 @@ class ArticlesController < ActionController::Base
         pics: article.pics,
         home_image: article.home_image
       }
+
+      images << article.src
+      if article.feature_article
+        images << article.feature_img_src
+      end
+      if article.article_type == 'slide_show'
+        images << article.pics
+      else
+        article.pics.each do |p|
+          images << p[0]
+          images << p[1]
+        end
+      end
     end
 
-    render :json => { "home_images" => home_images_json, "info" => article_info_json }
+    render :json => {
+      home_images: home_images_json,
+      info: article_info_json,
+      images: images.flatten
+    }
   end
 end

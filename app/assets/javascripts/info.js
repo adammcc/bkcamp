@@ -9,13 +9,13 @@ $(document).ready(function() {
     success: function(data) {
       homeImages = data["home_images"];
       info = data["info"];
-      preload(homeImages)
+      preload(data["images"])
     }
   });
 })
 
 function preload(arrayOfImages) {
   $(arrayOfImages).each(function(){
-    $('<img/>')[0].src = this[0];
+    $('<img/>')[0].src = this;
   });
 }
