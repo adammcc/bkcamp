@@ -73,7 +73,6 @@ var BkShowSlidShow = React.createClass({
     return (
       <div className="col-sm-12">
         <BkMainHeader path="#articles/everything" />
-        <div className="bk-show__title">[ { info[this.props.params.name].title } ]</div>
 
         <div className="col-sm-8">
           <div className="bk-show__main-image -slide-show">
@@ -106,10 +105,11 @@ var BkShowSlidShow = React.createClass({
           )}
         </div>
 
+        <div className="bk-show__title">{ info[this.props.params.name].title }</div>
         <div className="bk-show__image-blurb -slide-show js-show__image-blurb">{ info[this.props.params.name]['blurb'] }</div>
 
         <div className="col-sm-12">
-          <div className="bk-show__title">[ More articles ]</div>
+          <div className="bk-show__title -center">More articles</div>
           <BkRow threeTitles={ this.state.recommendations } />
         </div>
       </div>

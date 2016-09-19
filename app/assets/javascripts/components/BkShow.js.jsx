@@ -61,7 +61,6 @@ var BkShow = React.createClass({
     return (
       <div>
         <BkMainHeader path="#articles/everything" />
-        <div className="bk-show__title">[ { info[this.props.params.name].title } ]</div>
 
         <div className="bk-show__main-image col-sm-8">
           <GalleryNav prevPic={this.prevPic} nextPic={this.nextPic} />
@@ -69,13 +68,14 @@ var BkShow = React.createClass({
         </div>
 
         <div className="col-sm-3">
+          <div className="bk-show__title">{ info[this.props.params.name].title }</div>
           <BkShowThumbs pics={info[this.props.params.name].pics} setActivePic={setActivePic} activePic={activePic} />
           <div className="bk-show__image-blurb js-show__image-blurb">{ this.state.activePic[2] }</div>
         </div>
 
         <div className="col-sm-12">
           <br/><br/><br/>
-          <div className="bk-show__title">[ More articles ]</div>
+          <div className="bk-show__title -center">More articles</div>
           <BkRow threeTitles={ this.state.recommendations } />
         </div>
       </div>

@@ -1,7 +1,10 @@
 .bk-show__title {
-  font-size: 18px;
+  font-size: 22px;
   padding-top: 10px;
-  text-align: center;
+  font-family: 'Lora', serif;
+  &.-center {
+    text-align: center;
+  }
 }
 
 .bk-show__main-image {
