@@ -73,12 +73,16 @@ var BkShowSlidShow = React.createClass({
     return (
       <div className="col-sm-12">
         <BkMainHeader path="#articles/everything" />
+        <div className="bk-show__title -center">{ info[this.props.params.name].title }</div>
 
-        <div className="col-sm-8">
+        <div className="col-sm-9">
           <div className="bk-show__main-image -slide-show">
-            <SlideShowNav prevPic={this.prevPic} nextPic={this.nextPic} picCount={ info[this.props.params.name].pics.length } />
+            <GalleryNav prevPic={this.prevPic} nextPic={this.nextPic} />
             <img src={ this.state.activePic } alt="bug" className="img-responsive" width="100%" height="90%"/>
           </div>
+
+          <div className="bk-show__image-blurb -slide-show js-show__image-blurb">{ info[this.props.params.name]['blurb'] }</div>
+
           {(
             recipe.length ?
             <div className="bk-show__recipe--container">
@@ -104,14 +108,8 @@ var BkShowSlidShow = React.createClass({
             false
           )}
         </div>
-
-        <div className="bk-show__title">{ info[this.props.params.name].title }</div>
-        <div className="bk-show__image-blurb -slide-show js-show__image-blurb">{ info[this.props.params.name]['blurb'] }</div>
-
-        <div className="col-sm-12">
-          <div className="bk-show__title -center">More articles</div>
-          <BkRow threeTitles={ this.state.recommendations } />
-        </div>
+        <div className="bk-show__title -center">More articles</div>
+        <BkColumn threeTitles={ this.state.recommendations } colWidth='3' stringLength='75' />
       </div>
     );
   }

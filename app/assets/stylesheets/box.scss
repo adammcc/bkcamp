@@ -1,3 +1,7 @@
+.padding {
+  margin: 20px 0px 40px 0px;
+}
+
 .bk-box {
   position: relative;
   cursor: pointer;
@@ -32,7 +36,10 @@ p.bk-box__blurb {
   padding: 15px;
   background-color: #f7f5f0;
   border: 1px solid #f6f6f6;
-  min-height: 170px;
+  // min-height: 170px;
+  &.-large {
+    margin-bottom: 40px;
+  }
 }
 
 p.bk-box__blurb:after {

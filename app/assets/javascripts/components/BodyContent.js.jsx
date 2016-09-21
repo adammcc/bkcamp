@@ -61,7 +61,7 @@ var BodyContent = React.createClass({
 
         { titles_in_threes.map(function (three_titles) {
           return (
-            <BkColumn key={three_titles[0]} threeTitles={three_titles} />
+            <BkColumn key={three_titles[0]} threeTitles={three_titles} colWidth='6' stringLength='275' />
           );
         })}
       </div>

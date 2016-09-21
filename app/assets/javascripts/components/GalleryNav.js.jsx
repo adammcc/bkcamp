@@ -1,7 +1,7 @@
 var GalleryNav = React.createClass({
   render: function () {
     return (
-      <div className="bk-show__nav-item-container bk-show__hide-til-hover">
+      <div className="bk-show__nav-item-container">
         <a className="bk-show__nav-item -home" href="#articles/everything">
           <i className="fa fa-home"></i>
         </a>

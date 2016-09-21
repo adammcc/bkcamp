@@ -1,8 +1,10 @@
 var BkShow = React.createClass({
   getInitialState: function () {
     return {
+      all_pics: info[this.props.params.name].pics,
       activePic: info[this.props.params.name].pics[0],
-      recommendations: this.recommendations()
+      recommendations: this.recommendations(),
+      galleryMode: false
     };
   },
   componentDidMount: function() {
@@ -10,6 +12,7 @@ var BkShow = React.createClass({
   },
   componentWillReceiveProps: function(props) {
     this.setState({
+      all_pics: info[props.params.name].pics,
       activePic: info[props.params.name].pics[0],
       recommendations: this.recommendations()
     }, this.reset);
@@ -19,9 +22,10 @@ var BkShow = React.createClass({
     $(window).scrollTop(0);
   },
   textToHtml: function () {
-    var html = $('.js-show__image-blurb').text()
-    $html =$($.parseHTML(html))
-    $('.js-show__image-blurb').html($html)
+    $('.js-show__image-blurb').each(function() {
+      $html = $($.parseHTML($(this).text()))
+      $(this).html($html)
+    });
   },
   setActivePic: function (pic) {
     this.setState({
@@ -42,6 +46,17 @@ var BkShow = React.createClass({
       activePic: info[this.props.params.name].pics[prevPicIndex]
     });
   },
+  switchMode: function() {
+    this.setState({
+      galleryMode: !this.state.galleryMode
+    }, this.textToHtml);
+
+    if (this.state.galleryMode) {
+      $('.bk-show__gallery').text('View gallery');
+    } else {
+      $('.bk-show__gallery').text('Hide gallery')
+    }
+  },
   recommendations: function () {
     var articleTitles = Object.keys(info);
     var titles = [];
@@ -61,23 +76,37 @@ var BkShow = React.createClass({
     return (
       <div>
         <BkMainHeader path="#articles/everything" />
+        <div className="bk-show__title -center"  onClick={ this.switchMode }>{ info[this.props.params.name].title }</div>
+        <div className="bk-show__gallery" onClick={ this.switchMode }>View gallery</div>
 
-        <div className="bk-show__main-image col-sm-8">
-          <GalleryNav prevPic={this.prevPic} nextPic={this.nextPic} />
-          <img src={ this.state.activePic[0] } alt="bug" width="100%" height="90%"/>
-        </div>
+        {
+          this.state.galleryMode ?
+            <div className="col-sm-9">
+              <div className="bk-show__main-image">
+                <GalleryNav prevPic={this.prevPic} nextPic={this.nextPic} />
+                <img src={ this.state.activePic[0] } alt="bug" width="100%" height="90%"/>
 
-        <div className="col-sm-3">
-          <div className="bk-show__title">{ info[this.props.params.name].title }</div>
-          <BkShowThumbs pics={info[this.props.params.name].pics} setActivePic={setActivePic} activePic={activePic} />
-          <div className="bk-show__image-blurb js-show__image-blurb">{ this.state.activePic[2] }</div>
-        </div>
+                <BkShowThumbs pics={info[this.props.params.name].pics} setActivePic={setActivePic} activePic={activePic} />
+                <div className="bk-show__image-blurb js-show__image-blurb">{ this.state.activePic[2] }</div>
+              </div>
+            </div>
+          :
+            <div className="bk-show__main-image col-sm-9">
+              { this.state.all_pics.map(function (pic) {
+                return (
+                  <div>
+                    <img src={ pic[0] } alt="pic" width="100%" height="90%"/>
+                    <p className='bk-show__image-blurb js-show__image-blurb'>
+                      { pic[2] }
+                    </p>
+                  </div>
+                );
+              })};
+            </div>
+        }
 
-        <div className="col-sm-12">
-          <br/><br/><br/>
-          <div className="bk-show__title -center">More articles</div>
-          <BkRow threeTitles={ this.state.recommendations } />
-        </div>
+        <div className="bk-show__title -center col-sm-3">More articles</div>
+        <BkColumn threeTitles={ this.state.recommendations } colWidth='3' stringLength='75' />
       </div>
     );
   }
