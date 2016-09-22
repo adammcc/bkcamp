@@ -83,7 +83,7 @@ var BkShow = React.createClass({
           this.state.galleryMode ?
             <div className="col-sm-9">
               <div className="bk-show__main-image">
-                <GalleryNav prevPic={this.prevPic} nextPic={this.nextPic} />
+                <GalleryNav prevPic={this.prevPic} nextPic={this.nextPic} picCount={ info[this.props.params.name].pics.length } />
                 <img src={ this.state.activePic[0] } alt="bug" width="100%" height="90%"/>
 
                 <BkShowThumbs pics={info[this.props.params.name].pics} setActivePic={setActivePic} activePic={activePic} />

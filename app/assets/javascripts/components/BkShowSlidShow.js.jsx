@@ -77,7 +77,7 @@ var BkShowSlidShow = React.createClass({
 
         <div className="col-sm-9">
           <div className="bk-show__main-image -slide-show">
-            <GalleryNav prevPic={this.prevPic} nextPic={this.nextPic} />
+            <GalleryNav prevPic={this.prevPic} nextPic={this.nextPic} picCount={ info[this.props.params.name].pics.length } />
             <img src={ this.state.activePic } alt="bug" className="img-responsive" width="100%" height="90%"/>
           </div>
 

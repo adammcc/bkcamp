@@ -87,6 +87,9 @@
   width: 140px;
   top: 12px;
   right: 15px;
+  &.-short {
+    width: 45px;
+  }
 }
 
 .bk-show__nav-item {
@@ -123,6 +126,7 @@
 }
 
 .bk-show__nav-item.-home { right: 102px; }
+.bk-show__nav-item.-home.-short { right: 9px; }
 .bk-show__nav-item.-prev { right: 57px; }
 .bk-show__nav-item.-next { right: 12px; }
 
