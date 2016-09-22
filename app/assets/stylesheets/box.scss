@@ -91,7 +91,7 @@ span.bk-box__ellipsis {
 
 .bk-box .bk-box__img-container i { display: none; }
 
-.bk-box:hover .bk-box__img-container i {
+.no-touch .bk-box:hover .bk-box__img-container i {
   position: absolute;
   display: inline-block;
   font-size: 18px;
