@@ -172,68 +172,24 @@ info = {
     title: "Mohonk Mountain House",
     main_blurb: "",
     filter: "getayways",
-    article_type: "gallery",
+    article_type: "slide_show",
     feature_article: "false",
+    blurb: "ay yo",
+    recipe: [],
+    instructions: [],
     pics: [
-      [
-        "#{ s3_path }mohonk/mohonk_hills.JPG",
-        "#{ s3_path }mohonk/thumbs/mohonk_hills__thumb.JPG",
-        "This works!!"
-      ],
-      [
-        "#{ s3_path }mohonk/mohonk_lake.JPG",
-        "#{ s3_path }mohonk/thumbs/mohonk_lake__thumb.JPG",
-        "This works too!!"
-      ],
-      [
-        "#{ s3_path }mohonk/mohonk_fronk.JPG",
-        "#{ s3_path }mohonk/thumbs/mohonk_fronk__thumb.JPG",
-        "This works too!!"
-      ],
-      [
-        "#{ s3_path }mohonk/mohonk_path.JPG",
-        "#{ s3_path }mohonk/thumbs/mohonk_path__thumb.JPG",
-        "This works too!!"
-      ],
-      [
-        "#{ s3_path }mohonk/mohonk_back_view.JPG",
-        "#{ s3_path }mohonk/thumbs/mohonk_back_view__thumb.JPG",
-        "This works too!!"
-      ],
-      [
-        "#{ s3_path }mohonk/mohonk_fish.JPG",
-        "#{ s3_path }mohonk/thumbs/mohonk_fish__thumb.JPG",
-        "This works too!!"
-      ],
-      [
-        "#{ s3_path }mohonk/mohonk_horses.JPG",
-        "#{ s3_path }mohonk/thumbs/mohonk_horses__thumb.JPG",
-        "This works too!!"
-      ],
-      [
-        "#{ s3_path }mohonk/mohonk_mountian_view.JPG",
-        "#{ s3_path }mohonk/thumbs/mohonk_mountian_view__thumb.JPG",
-        "This works too!!"
-      ],
-      [
-        "#{ s3_path }mohonk/mohonk_path_2.JPG",
-        "#{ s3_path }mohonk/thumbs/mohonk_path_2__thumb.JPG",
-        "This works too!!"
-      ],
-      [
-        "#{ s3_path }mohonk/mohonk_sunset_hut.JPG",
-        "#{ s3_path }mohonk/thumbs/mohonk_sunset_hut__thumb.JPG",
-        "This works too!!"
-      ],
-      [
-        "#{ s3_path }mohonk/mohonk_sunset_tower.JPG",
-        "#{ s3_path }mohonk/thumbs/mohonk_sunset_tower__thumb.JPG",
-        "This works too!!"
-      ],
-      [
-        "#{ s3_path }mohonk/mohonk_sunset.JPG",
-        "#{ s3_path }mohonk/thumbs/mohonk_sunset__thumb.JPG",
-        "This works too!!"]
+      "#{ s3_path }mohonk/mohonk_hills.JPG",
+      "#{ s3_path }mohonk/mohonk_lake.JPG",
+      "#{ s3_path }mohonk/mohonk_fronk.JPG",
+      "#{ s3_path }mohonk/mohonk_path.JPG",
+      "#{ s3_path }mohonk/mohonk_back_view.JPG",
+      "#{ s3_path }mohonk/mohonk_fish.JPG",
+      "#{ s3_path }mohonk/mohonk_horses.JPG",
+      "#{ s3_path }mohonk/mohonk_mountian_view.JPG",
+      "#{ s3_path }mohonk/mohonk_path_2.JPG",
+      "#{ s3_path }mohonk/mohonk_sunset_hut.JPG",
+      "#{ s3_path }mohonk/mohonk_sunset_tower.JPG",
+      "#{ s3_path }mohonk/mohonk_sunset.JPG",
     ]
   },
   new_haven: {
