@@ -153,7 +153,7 @@ info = {
     main_blurb: "This has been my goto weekend bag for the past two years. It’s rugged, beautiful, and built to last.",
     filter: "things",
     article_type: "slide_show",
-    feature_article: "true",
+    feature_article: "false",
     feature_img_src: "#{ s3_path }filson/feature_image/filson_1.JPG",
     blurb: "My previous duffle was a freebie from work - a thick, cheap red nylon bag with the name of my employer emblazoned on the side pocket. Ugly as it was, it did the job, shuttling my spare weekend wardrobe to and from the city on multiple getaways. Once synthetic crumbles started showing up on my clothing, I knew I needed something a little more durable. Enter the <a href='http://www.filson.com/luggage-bags/duffle-bags/duffle-bag-small.html' target='_blank'>Filson Duffle</a> (size small), made of tan water resistant twill and Guinness-black adjustable leather straps. This may be the last bag you’ll ever need to buy: It’s durable, structured, and the perfect size for Friday-Sunday voyages anywhere and in any season. And once in awhile, you’ll enjoy the embedded compliment of being stopped by a stranger who asks you where they can get one.",
     recipe: [],
@@ -503,6 +503,68 @@ info = {
         "#{ s3_path }mv/thumbs/marthas_vineyard_creek__thumb.JPG",
         "This works!!"]
     ]
+  },
+  lic_beer: {
+    src: "#{ s3_path }lic_beer/lic_beer__trans_bottles.JPG",
+    alt: "lic_beer",
+    title: "Hunter's Point Breweries",
+    main_blurb: "Queens has the best beer in NYC. Here's what's happening in Hunter's Point",
+    filter: "getayways",
+    article_type: "gallery",
+    feature_article: "true",
+    feature_img_src: "#{ s3_path }lic_beer/feature_image/lic_beer__trans_bottles__feature.JPG",
+    blurb: "Queens has the best beer in NYC. Here's what's happening in Hunter's Point",
+    pics: [
+      [
+        "#{ s3_path }lic_beer/lic_beer__trans_bottles.JPG",
+        "#{ s3_path }lic_beer/thumbs/lic_beer__trans_bottles__thumb.JPG",
+        "T-bone hamburger chuck, salami tongue short loin turkey biltong cow meatball tenderloin ball tip doner alcatra jowl."
+      ],
+      [
+        "#{ s3_path }lic_beer/lic_beer__trans_outside.JPG",
+        "#{ s3_path }lic_beer/thumbs/lic_beer__trans_outside__thumb.JPG",
+        "T-bone hamburger chuck, salami tongue short loin turkey biltong cow meatball tenderloin ball tip doner alcatra jowl."
+      ],
+      [ "#{ s3_path }lic_beer/lic_beer__trans_tasting.JPG",
+        "#{ s3_path }lic_beer/thumbs/lic_beer__trans_tasting__thumb.JPG",
+        "This works too!!"
+      ],
+      [
+        "#{ s3_path }lic_beer/lic_beer__trans_bottle.JPG",
+        "#{ s3_path }lic_beer/thumbs/lic_beer__trans_bottle__thumb.JPG",
+        "Leberkas porchetta ball tip, biltong chicken turducken venison corned beef. Drumstick tail meatloaf turkey pancetta shank."
+      ],
+      [
+        "#{ s3_path }lic_beer/lic_beer__proj_outside.JPG",
+        "#{ s3_path }lic_beer/thumbs/lic_beer__proj_outside__thumb.JPG",
+        "T-bone hamburger chuck, salami tongue short loin turkey biltong cow meatball tenderloin ball tip doner alcatra jowl."
+      ],
+      [
+        "#{ s3_path }lic_beer/lic_beer__proj_inside.JPG",
+        "#{ s3_path }lic_beer/thumbs/lic_beer__proj_inside__thumb.JPG",
+        "T-bone hamburger chuck, salami tongue short loin turkey biltong cow meatball tenderloin ball tip doner alcatra jowl."
+      ],
+      [
+        "#{ s3_path }lic_beer/lic_beer__proj_beer.JPG",
+        "#{ s3_path }lic_beer/thumbs/lic_beer__proj_beer__thumb.JPG",
+        "T-bone hamburger chuck, salami tongue short loin turkey biltong cow meatball tenderloin ball tip doner alcatra jowl."
+      ],
+      [
+        "#{ s3_path }lic_beer/lic_beer__alice_outside.JPG",
+        "#{ s3_path }lic_beer/thumbs/lic_beer__alice_outside__thumb.JPG",
+        "T-bone hamburger chuck, salami tongue short loin turkey biltong cow meatball tenderloin ball tip doner alcatra jowl."
+      ],
+      [
+        "#{ s3_path }lic_beer/lic_beer__alice-people.JPG",
+        "#{ s3_path }lic_beer/thumbs/lic_beer__alice-people__thumb.JPG",
+        "Tri-tip pig meatball, alcatra cupim picanha jowl tenderloin tail rump turkey landjaeger pork belly pastrami."
+      ],
+      [
+        "#{ s3_path }lic_beer/lic_beer__alice_sample.JPG",
+        "#{ s3_path }lic_beer/thumbs/lic_beer__alice_sample__thumb.JPG",
+        "Tri-tip pig meatball, alcatra cupim picanha jowl tenderloin tail rump turkey landjaeger pork belly pastrami."
+      ]
+    ]
   }
 }
 
@@ -529,7 +591,7 @@ homeImages = [
   ["#{ s3_path }mv/home_image/marthas_vineyard_creek__home.JPG", 'Marthas Vineyard', '#article/marthas_vineyard']
 ]
 
-kays = ["finger_lakes", "livingston_manor", "hard_cooked_eggs", "masala_crunch", "filson", "mohonk", "new_haven", "hoot", "shrub", "bear_mountain", "hudson_winter_walk", "nyack", "storm_king", "scotland", "spain", "newport", "saugerties", "marthas_vineyard"]
+kays = ["finger_lakes", "livingston_manor", "hard_cooked_eggs", "masala_crunch", "filson", "mohonk", "new_haven", "hoot", "shrub", "bear_mountain", "hudson_winter_walk", "nyack", "storm_king", "scotland", "spain", "newport", "saugerties", "marthas_vineyard", "lic_beer"]
 
 Article.asc(:created_at).each_with_index do |art, i|
   art.set(alt: kays[i])
