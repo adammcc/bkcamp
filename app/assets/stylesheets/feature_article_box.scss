@@ -1,6 +1,8 @@
 .bk-feature-article {
   display: flex;
   margin-bottom: 25px;
+  height: inherit;
+  padding: 0 30px;
 }
 
 .bk-feature-article .bk-box__img-container {
@@ -14,6 +16,7 @@
   font-size: 18px;
   background-color: #f7f5f0;
   border: 1px solid #f6f6f6;
+  height: 100%;
   &:after {
     content: '';
     display: block;

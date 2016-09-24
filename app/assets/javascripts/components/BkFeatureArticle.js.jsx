@@ -3,9 +3,8 @@ var BkFeatureArticle = React.createClass({
     var article_type = this.props.article_type == 'gallery' ? 'article' : 'slide_show'
     var path  =  "#" + article_type + "/" + this.props.alt
     return (
-      <a href={path}>
-        <div className="bk-feature-article col-sm-12">
-
+      <div className="bk-feature-article row">
+        <a href={path}>
           <div className='bk-box__img-container col-sm-8'>
             <div className='bk-box__img-container--inner'>
               <img src={this.props.src} alt={this.props.alt} height="auto" width="100%" />
@@ -20,9 +19,8 @@ var BkFeatureArticle = React.createClass({
               <i className="fa fa-angle-double-right"></i> READ MORE
             </div>
           </div>
-
-        </div>
-      </a>
+        </a>
+      </div>
     );
   }
 });
