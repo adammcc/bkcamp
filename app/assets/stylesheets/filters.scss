@@ -4,6 +4,7 @@
   cursor: pointer;
   margin-bottom: 30px;
   text-align: center;
+  padding: 0px 30px;
 }
 
 .bk-filters__container {
@@ -16,7 +17,6 @@
 .bk-filters__option {
   padding-right: 10px !important;
   padding-left: 10px !important;
-  min-width: 85px;
 }
 
 a.bk-filters__option {
