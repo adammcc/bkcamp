@@ -1,0 +1,755 @@
+/* line 1, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/body_content.scss */
+.bk-header {
+  margin: 10px 0px 0px 0px;
+}
+
+/* line 5, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/body_content.scss */
+.bk-header__title {
+  font-family: 'Abril Fatface', cursive;
+  font-weight: 100;
+  text-align: center;
+  font-size: 60px;
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+/* line 13, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/body_content.scss */
+.bk-header__title .-field {
+  font-weight: 400;
+}
+/* line 16, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/body_content.scss */
+.bk-header__title .-and {
+  font-weight: 200;
+  font-size: 60px;
+}
+/* line 20, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/body_content.scss */
+.bk-header__title.-home {
+  font-size: 60px;
+  color: white;
+  margin-bottom: 10px;
+}
+/* line 1, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/box.scss */
+.padding {
+  margin: 20px 0px 40px 0px;
+}
+
+/* line 5, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/box.scss */
+.bk-box {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  padding-bottom: 15px;
+}
+
+/* line 13, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/box.scss */
+.bk-article-row__box .bk-box {
+  padding: 15px;
+}
+
+/* line 17, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/box.scss */
+.bk-box__title {
+  font-size: 22px;
+  font-weight: 300;
+  margin-top: 30%;
+  text-align: center;
+  font-family: 'Lora', serif;
+}
+
+/* line 25, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/box.scss */
+.bk-box p {
+  line-height: 22px;
+  font-size: 14px;
+  color: white;
+}
+
+/* line 31, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/box.scss */
+p.bk-box__blurb {
+  position: relative;
+  color: #55676A;
+  line-height: 22px;
+  font-size: 16px;
+  padding: 15px;
+  background-color: #f7f5f0;
+  border: 1px solid #f6f6f6;
+}
+/* line 40, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/box.scss */
+p.bk-box__blurb.-large {
+  margin-bottom: 40px;
+}
+
+/* line 45, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/box.scss */
+p.bk-box__blurb:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -20px;
+  bottom: 100%;
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid #f7f5f0;
+  border-top: 20px solid transparent;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}
+
+/* line 60, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/box.scss */
+span.bk-box__ellipsis {
+  text-align: center;
+  font-size: 30px;
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 28px;
+}
+
+/* line 70, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/box.scss */
+.bk-box .bk-box__img-container {
+  position: relative;
+  height: auto;
+  margin: 0px;
+  width: 100%;
+}
+
+/* line 77, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/box.scss */
+.bk-box .bk-box__note-container {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: opacity .3s ease-in-out;
+  opacity: 1;
+}
+
+/* line 88, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/box.scss */
+.bk-box:hover .bk-box__note-container {
+  opacity: 0;
+}
+
+/* line 92, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/box.scss */
+.bk-box .bk-box__img-container i {
+  display: none;
+}
+
+/* line 94, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/box.scss */
+.no-touch .bk-box:hover .bk-box__img-container i {
+  position: absolute;
+  display: inline-block;
+  font-size: 18px;
+  color: white;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+/* line 104, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/box.scss */
+.bk-box img {
+  -webkit-filter: grayscale(60%);
+  filter: grayscale(60%);
+}
+
+/* line 109, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/box.scss */
+.bk-box:hover img {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+/* line 1, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/feature_article_box.scss */
+.bk-feature-article {
+  display: flex;
+  margin-bottom: 25px;
+  height: inherit;
+  padding: 0 30px;
+}
+
+/* line 8, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/feature_article_box.scss */
+.bk-feature-article .bk-box__img-container {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+/* line 13, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/feature_article_box.scss */
+.bk-box__feature-note-container {
+  color: #55676A;
+  padding-top: 5px;
+  font-size: 18px;
+  background-color: #f7f5f0;
+  border: 1px solid #f6f6f6;
+  height: 100%;
+}
+/* line 20, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/feature_article_box.scss */
+.bk-box__feature-note-container:after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  margin-top: -30px;
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-right: 30px solid #f7f5f0;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid transparent;
+}
+
+/* line 36, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/feature_article_box.scss */
+.bk-box__feature-title {
+  font-size: 30px;
+  margin-top: 24px;
+  margin-bottom: 20px;
+  font-family: 'Lora', serif;
+}
+
+/* line 43, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/feature_article_box.scss */
+.bk-feature-article__read_more {
+  font-size: 14px;
+  color: #53bafd;
+}
+/* line 1, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/filters.scss */
+.bk-filters__row {
+  text-transform: uppercase;
+  font-size: 12px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 0px 30px;
+}
+
+/* line 10, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/filters.scss */
+.bk-filters__container {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+/* line 17, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/filters.scss */
+.bk-filters__option {
+  padding-right: 10px !important;
+  padding-left: 10px !important;
+}
+
+/* line 22, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/filters.scss */
+a.bk-filters__option {
+  color: #333;
+  opacity: 0.7;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+/* line 26, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/filters.scss */
+a.bk-filters__option.-selected {
+  color: #333;
+  cursor: default;
+}
+
+/* line 37, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/filters.scss */
+.bk-filters__option:hover {
+  opacity: 1.0;
+  color: #53bafd;
+}
+
+/* line 42, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/filters.scss */
+.bk-filters__option.-selected {
+  color: #333;
+  cursor: default;
+}
+
+/* line 47, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/filters.scss */
+.bk-filters__option::before,
+.bk-filters__option::after {
+  display: inline-block;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s;
+}
+
+/* line 56, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/filters.scss */
+.bk-filters__option::before {
+  margin-right: 6px;
+  content: '[';
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+/* line 64, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/filters.scss */
+.bk-filters__option::after {
+  margin-left: 6px;
+  content: ']';
+  -webkit-transform: translateX(-20px);
+  -moz-transform: translateX(-20px);
+  transform: translateX(-20px);
+}
+
+/* line 72, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/filters.scss */
+.bk-filters__option:hover::before,
+.bk-filters__option:hover::after,
+.bk-filters__option:focus::before,
+.bk-filters__option:focus::after {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+/* line 82, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/filters.scss */
+.bk-filters__option.-selected::before,
+.bk-filters__option.-selected::after {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px);
+}
+/* line 1, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/home.scss */
+.bk-home-container {
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+/* line 13, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/home.scss */
+.bk-home__faded {
+  opacity: 0.8;
+}
+
+/* line 14, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/home.scss */
+.bk-home__faded:hover {
+  opacity: 1;
+}
+
+/* line 15, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/home.scss */
+.bk-home-container .bk-home__enter,
+.bk-home-container .bk-home__bottom_left a {
+  color: white;
+}
+
+/* line 18, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/home.scss */
+.bk-home__center {
+  margin: 0 auto;
+  margin-top: 20%;
+  width: 100%;
+  height: 96px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* line 26, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/home.scss */
+.bk-home__bottom_left {
+  position: absolute;
+  left: 5%;
+  bottom: 3%;
+}
+
+/* line 32, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/home.scss */
+.bk-home__bottom_right {
+  cursor: pointer;
+  position: absolute;
+  right: 5%;
+  bottom: 3%;
+  font-size: 30px;
+}
+/* line 38, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/home.scss */
+.bk-home__bottom_right .bk-home-circle {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 50px;
+  border: 2px solid white;
+}
+/* line 45, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/home.scss */
+.bk-home__bottom_right i {
+  position: absolute;
+  bottom: 0px;
+  left: 10px;
+}
+
+/* line 52, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/home.scss */
+.bk-home__enter {
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 100;
+}
+/* line 1, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/main.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 3, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/main.scss */
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #55676A;
+}
+
+/* line 9, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/main.scss */
+h1 {
+  color: #53bafd;
+  margin: 0px 0px 5px 0px;
+}
+
+/* line 14, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/main.scss */
+h4 {
+  color: white;
+}
+
+/* line 15, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/main.scss */
+p {
+  margin: 0;
+}
+
+/* line 17, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/main.scss */
+img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/* line 25, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/main.scss */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* line 27, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/main.scss */
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: #53bafd;
+}
+
+/* line 32, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/main.scss */
+.container {
+  width: 84%;
+}
+
+/* line 34, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/main.scss */
+.bk-ellipsis {
+  text-align: center;
+  font-size: 60px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 50px;
+}
+@media screen and (max-width: 480px) {
+  /* line 3, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/mobile.scss */
+  [class*="col-"] {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  /* line 12, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/mobile.scss */
+  .bk-feature-article.row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  /* line 17, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/mobile.scss */
+  .bk-feature-article {
+    padding: 0;
+  }
+
+  /* line 23, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/mobile.scss */
+  .bk-show__instructions {
+    padding: 20px !important;
+  }
+
+  /* line 27, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/mobile.scss */
+  .bk-show__small-image img {
+    height: 65px;
+    width: 65px;
+  }
+
+  /* line 34, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/mobile.scss */
+  .bk-filters__row {
+    padding: 0px;
+  }
+
+  /* line 38, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/mobile.scss */
+  .bk-filters__container {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  /* line 45, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/mobile.scss */
+  .bk-column {
+    padding: 0 !important;
+  }
+
+  /* line 51, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/mobile.scss */
+  .bk-box__feature-note-container {
+    padding-top: 20px;
+    height: auto;
+  }
+
+  /* line 57, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/mobile.scss */
+  .bk-box__feature-note-container:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    top: -6%;
+    width: 0;
+    height: 0;
+    border-bottom: 30px solid #f7f5f0;
+    border-top: 30px solid transparent;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+  }
+}
+/* line 1, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/row.scss */
+.bk-article-row__box {
+  padding: 0px;
+  height: 100%;
+}
+/* line 1, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__title {
+  font-size: 22px;
+  font-family: 'Lora', serif;
+}
+/* line 5, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__title.-center {
+  text-align: center;
+}
+
+/* line 10, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__gallery {
+  text-align: center;
+  color: #53bafd;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* line 17, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__main-image {
+  position: relative;
+}
+/* line 20, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__main-image.-slide-show {
+  margin: 20px 15px 15px 0px;
+}
+
+/* line 25, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__image-blurb {
+  padding-top: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+/* line 29, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__image-blurb.-slide-show {
+  padding-top: 16px;
+  width: 98%;
+}
+
+/* line 35, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__recipe--container {
+  color: grey;
+  margin-top: 20px;
+  display: inline-block;
+  background-color: #f7f5f0;
+  margin-right: 15px;
+}
+
+/* line 43, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__recipe {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+/* line 48, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__instructions {
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+/* line 53, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__recipe dd {
+  margin-bottom: 12px;
+}
+
+/* line 54, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__recipe p {
+  margin-bottom: 10px;
+}
+
+/* line 55, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__small-images {
+  padding-top: 15px;
+  margin-left: -5px;
+}
+
+/* line 57, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__small-image {
+  display: inline-block;
+  cursor: pointer;
+  padding: 7px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+/* line 66, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__small-image.-selected {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
+/* line 71, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__hide-til-hover {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+/* line 79, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__main-image:hover .bk-show__hide-til-hover {
+  opacity: 1;
+}
+
+/* line 83, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__nav-item-container {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 40px;
+  width: 140px;
+  top: 12px;
+  right: 15px;
+}
+/* line 90, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__nav-item-container.-short {
+  width: 45px;
+}
+
+/* line 95, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__nav-item {
+  position: absolute;
+  top: 6px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50px;
+  border: 2px solid white;
+}
+/* line 102, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__nav-item i {
+  position: absolute;
+  color: white;
+  font-size: 26px;
+  text-align: center;
+}
+/* line 108, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__nav-item.-home i {
+  font-size: 14px;
+  right: 6px;
+  top: 4px;
+}
+/* line 113, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__nav-item.-next i {
+  right: 6px;
+  bottom: 0px;
+}
+/* line 117, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__nav-item.-prev i {
+  left: 6px;
+  bottom: 0px;
+}
+
+/* line 123, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__image-blurb {
+  font-size: 18px;
+  margin: 10px 0px 40px 0px;
+}
+
+/* line 128, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__nav-item.-home {
+  right: 102px;
+}
+
+/* line 129, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__nav-item.-home.-short {
+  right: 9px;
+}
+
+/* line 130, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__nav-item.-prev {
+  right: 57px;
+}
+
+/* line 131, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__nav-item.-next {
+  right: 12px;
+}
+
+/* line 133, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__nav-item-container.-home.-slide-show {
+  right: 0;
+}
+
+/* line 135, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__nav-item-container {
+  right: 0;
+}
+
+/* line 137, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__nav-item-container.-home.-slide-show,
+.bk-show__nav-item-container.-next.-slide-show,
+.bk-show__nav-item-container.-prev.-slide-show {
+  width: 53px;
+}
+
+/* line 141, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__nav-item-container.-next.-slide-show,
+.bk-show__nav-item-container.-prev.-slide-show {
+  top: 48%;
+  right: 0px;
+}
+
+/* line 143, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__nav-item-container.-prev.-slide-show {
+  left: 0px;
+}
+
+/* line 145, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__nav-item.-home.-slide-show {
+  right: 12px;
+}
+
+/* line 146, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__nav-item.-next.-slide-show {
+  right: 12px;
+}
+
+/* line 147, /Users/adammccabe/Documents/bkcamp/app/assets/stylesheets/show.scss */
+.bk-show__nav-item.-prev.-slide-show {
+  right: 12px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
